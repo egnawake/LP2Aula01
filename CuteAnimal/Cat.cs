@@ -20,6 +20,11 @@ namespace CuteAnimal
             this.feedStatus = feedStatus;
         }
 
+        public Cat(string name) : this(name, 1, "None", Mood.Happy,
+            Feed.AboutToExplode)
+        {
+        }
+
         public void Play()
         {
             if (mood == Mood.Grumpy)
