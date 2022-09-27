@@ -10,6 +10,16 @@ namespace CuteAnimal
         private Mood mood;
         private Feed feedStatus;
 
+        public Cat(string name, int age, string species,
+            Mood mood, Feed feedStatus)
+        {
+            this.name = name;
+            this.age = age;
+            this.species = species;
+            this.mood = mood;
+            this.feedStatus = feedStatus;
+        }
+
         public void Play()
         {
             if (mood == Mood.Grumpy)
