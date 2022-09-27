@@ -34,10 +34,7 @@ namespace CuteAnimal
         {
         }
 
-        public string GetName()
-        {
-            return name;
-        }
+        public string GetName() => name;
 
         public void Play()
         {
