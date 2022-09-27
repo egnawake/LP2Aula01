@@ -34,6 +34,11 @@ namespace CuteAnimal
         {
         }
 
+        public string GetName()
+        {
+            return name;
+        }
+
         public void Play()
         {
             if (mood == Mood.Grumpy)

@@ -10,6 +10,10 @@ namespace CuteAnimal
             Cat harry = new Cat("Harry", 2, "Siamese", Mood.HyperActive,
                 Feed.Satisfied);
             Cat garfield = new Cat("Garfield");
+
+            Console.WriteLine(bob.GetName());
+            Console.WriteLine(harry.GetName());
+            Console.WriteLine(garfield.GetName());
         }
     }
 }
