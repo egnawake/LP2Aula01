@@ -9,9 +9,18 @@ namespace CuteAnimal
         private string species;
         private Mood mood;
         private Feed feedStatus;
+        private int energy;
+
+        private Random rand;
+
+        private Cat()
+        {
+            rand = new Random();
+            energy = rand.Next(101);
+        }
 
         public Cat(string name, int age, string species,
-            Mood mood, Feed feedStatus)
+            Mood mood, Feed feedStatus) : this()
         {
             this.name = name;
             this.age = age;
