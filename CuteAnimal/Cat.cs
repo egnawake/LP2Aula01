@@ -4,7 +4,6 @@ namespace CuteAnimal
 {
     public class Cat
     {
-        private string name;
         private int age;
         private string species;
         private Mood mood;
@@ -12,6 +11,8 @@ namespace CuteAnimal
         private int energy;
 
         private Random rand;
+
+        public string Name { get; }
 
         private Cat()
         {
@@ -22,7 +23,7 @@ namespace CuteAnimal
         public Cat(string name, int age, string species,
             Mood mood, Feed feedStatus) : this()
         {
-            this.name = name;
+            Name = name;
             this.age = age;
             this.species = species;
             this.mood = mood;
@@ -34,16 +35,14 @@ namespace CuteAnimal
         {
         }
 
-        public string GetName() => name;
-
         public void Play()
         {
             if (mood == Mood.Grumpy)
             {
-                Console.WriteLine($"{name} doesn't want to play.");
+                Console.WriteLine($"{Name} doesn't want to play.");
                 return;
             }
-            Console.WriteLine($"{name} played with its mouse toy.");
+            Console.WriteLine($"{Name} played with its mouse toy.");
         }
     }
 }

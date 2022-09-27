@@ -11,9 +11,9 @@ namespace CuteAnimal
                 Feed.Satisfied);
             Cat garfield = new Cat("Garfield");
 
-            Console.WriteLine(bob.GetName());
-            Console.WriteLine(harry.GetName());
-            Console.WriteLine(garfield.GetName());
+            Console.WriteLine(bob.Name);
+            Console.WriteLine(harry.Name);
+            Console.WriteLine(garfield.Name);
         }
     }
 }
