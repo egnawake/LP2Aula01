@@ -13,18 +13,55 @@ namespace CuteAnimal
         private Random rand;
 
         public string Name { get; }
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    age = 0;
+                    return;
+                }
+                age = value;
+            }
+        }
+        public int Energy
+        {
+            get
+            {
+                return energy;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    energy = 0;
+                    return;
+                }
+                if (value > 100)
+                {
+                    energy = 100;
+                    return;
+                }
+                energy = value;
+            }
+        }
 
         private Cat()
         {
             rand = new Random();
-            energy = rand.Next(101);
+            Energy = rand.Next(101);
         }
 
         public Cat(string name, int age, string species,
             Mood mood, Feed feedStatus) : this()
         {
             Name = name;
-            this.age = age;
+            Age = age;
             this.species = species;
             this.mood = mood;
             this.feedStatus = feedStatus;
@@ -43,6 +80,11 @@ namespace CuteAnimal
                 return;
             }
             Console.WriteLine($"{Name} played with its mouse toy.");
+        }
+
+        public override string ToString()
+        {
+            return $"{Name} | Age: {Age} | Energy: {Energy}";
         }
     }
 }
