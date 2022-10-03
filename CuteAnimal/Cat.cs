@@ -52,6 +52,7 @@ namespace CuteAnimal
                 energy = value;
             }
         }
+        public OwnedToys Toys { get; private set; }
 
         private Cat()
         {
@@ -61,17 +62,18 @@ namespace CuteAnimal
         }
 
         public Cat(string name, int age, string species,
-            Mood mood, Feed feedStatus) : this()
+            Mood mood, Feed feedStatus, OwnedToys toys) : this()
         {
             Name = name;
             Age = age;
             this.species = species;
             this.mood = mood;
             this.feedStatus = feedStatus;
+            Toys = toys;
         }
 
         public Cat(string name) : this(name, 1, "None", Mood.Happy,
-            Feed.AboutToExplode)
+            Feed.AboutToExplode, OwnedToys.None)
         {
         }
 
