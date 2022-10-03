@@ -4,6 +4,8 @@ namespace CuteAnimal
 {
     public class Cat
     {
+        public static int NumberOfCats { get; private set; }
+
         private int age;
         private string species;
         private Mood mood;
@@ -55,6 +57,7 @@ namespace CuteAnimal
         {
             rand = new Random();
             Energy = rand.Next(101);
+            NumberOfCats++;
         }
 
         public Cat(string name, int age, string species,

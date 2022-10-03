@@ -16,6 +16,8 @@ namespace CuteAnimal
             Console.WriteLine(harry);
             Console.WriteLine(garfield);
             Console.WriteLine(lucas);
+
+            Console.WriteLine(Cat.NumberOfCats);
         }
     }
 }
